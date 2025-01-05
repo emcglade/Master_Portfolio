@@ -1,47 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@500&display=swap');
-
+/* General Styles */
 body {
-    background-color: #ffffff;
-    background: linear-gradient(to right, #070707, #171318);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #4a1564;
+    box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Make header take full viewport height */
-    text-align: center; /* Center text horizontally */
+/* Hero Section */
+.hero {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
 }
 
-header.hero {
-    font-family: 'Poppins', sans-serif; /* Fun font for the title */
-    color: #edebec; /* Light color for text */
-    padding: 20px;
-}
-
-h1.fun-title {
-    font-size: 3rem; /* Increase font size for the title */
+.hero h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.5rem; /* Adjust font size for the paragraph */
+.hero p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .cta-button {
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #ff6347; /* Button color */
+    background-color: #00bcd4;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #e5533f; /* Button hover effect */
+    background-color: #0097a7;
+}
+
+/* Navigation Bar */
+.nav-menu {
+    background-color: #5e5b5b; /* Dark background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav_menu_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_menu_list li {
+    margin: 0 50px;
+}
+
+.nav_menu_list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+.nav_menu_list a:hover {
+    color: #00bcd4; /* Highlight color */
+}
+
+/* Main Content */
+main {
+    margin-top: 100px; /* To ensure content doesn’t overlap with the fixed nav */
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 50px 0;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    margin-top: 20px;
 }
