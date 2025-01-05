@@ -6,6 +6,12 @@
     <title>Emma McGlade's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Enable smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
@@ -14,11 +20,47 @@
             <p>Data Engineer</p>
             <a href="#portfolio" class="cta-button">View My Work</a>
         </div>
+        <nav class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
-        <p>This is Emma's Portfolio</p>
-        <p>Welcome</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Currently, I work as a data analyst at Options IT, where I use Python and REST APIs to automate processes, optimize workflows, and drive actionable insights. As I continue to grow my skills, I'm diving into web development with a focus on HTML, CSS, and JavaScript, and I'm excited to apply these skills to new projects.
+
+                This portfolio is a reflection of my journey, showcasing my work and skills in data analysis, web development, and sports analytics. Feel free to explore and get in touch if you’re interested in collaborating!</p>
+                <img src="/Users/emmamcglade/Library/Mobile Documents/com~apple~CloudDocs/Master_Portfolio/Master_Portfolio/images/profile_picture.jpeg" class="about-image">
+            </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Here are some of my recent projects:</p>
+            <section id="portfolio">
+                <h2>My Projects</h2>
+                <iframe 
+                    src="https://localhost:8888/notebooks/covid_analysis_project_highest_cases%20.ipynb" 
+                    width="100%" 
+                    height="600" 
+                    style="border: none;">
+                </iframe>
+            </section>
+            
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me at <a href="mailto:emglade98@gmail.com">emglade98@gmail.com</a>.</p>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Emma McGlade. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
