@@ -1,164 +1,166 @@
-/* Global Styles */
-* {
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    padding-top: 80px; /* To avoid overlap with fixed navbar */
-}
-
 /* Hero Section */
 .hero {
-    background-color: #333;
+    background-color: #282c34;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 30px 20px;
     position: relative;
 }
 
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.fun-title {
-    color: #00bcd4; /* Accent color */
-    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.0rem;
+    margin-bottom: 20px;
 }
 
+#about {
+    margin-top: -20px;
+}
+
+
 .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #00bcd4;
     color: white;
-    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #028e92;
+    background-color: #0097a7;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .nav-menu {
+    background-color: #5e5b5b; /* Dark background */
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    background-color: #222;
-    color: white;
+    width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav_menu_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    list-style-type: none;
+    align-items: center;
 }
 
 .nav_menu_list li {
     margin: 0 20px;
 }
 
-.nav_menu_list li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: color 0.3s ease;
+.nav_menu_list a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
-.nav_menu_list li a:hover {
-    color: #00bcd4;
+.nav_menu_list a:hover {
+    color: #00bcd4; /* Highlight color */
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    margin: 60px 0;
+/* Main Content */
+main {
+    margin-top: 100px; /* To ensure content doesn’t overlap with the fixed nav */
+    padding: 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+section {
+    margin: 50px 0;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 2rem;
     color: #333;
-    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
 }
 
 section p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
     color: #555;
 }
 
-section img {
-    max-width: 300px;
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
-/* Portfolio Section */
-#portfolio {
-    background-color: #ffffff;
+#cv-download {
+    text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    max-width: 600px;
 }
 
+#cv-download h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+#cv-download p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0073e6;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+    background-color: #005bb5;
+}
+
+#portfolio, #projects {
+    margin-bottom: 40px;
+}
 iframe {
-    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
+    background-color: #282c34;
     color: white;
-}
-
-footer p {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .cta-button {
-        padding: 12px 25px;
-    }
-
-    .nav_menu_list {
-        flex-direction: column;
-    }
-
-    .nav_menu_list li {
-        margin: 10px 0;
-    }
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    margin-top: 20px;
 }
