@@ -1,13 +1,12 @@
 /* General Styles */
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 :root {
     --font-small: 0.875rem;
-    --font-medium: 1rem;
+    --font-medium: -13rem;
     --font-large: 1.25rem;
     --font-xlarge: 2.5rem;
     --font-weight-regular: 400;
@@ -28,8 +27,8 @@ body {
     font-size: var(--font-medium);
     background-color: var(--color-background);
     color: var(--color-dark);
-    line-height: 1.6;
-    display: flex;
+    line-height: normal;
+    display: fixed;
     flex-direction: column;
 }
 
@@ -148,37 +147,65 @@ body {
 /* Main Content */
 main {
     margin-left: 260px; /* Account for sidebar width */
-    padding: 40px 40px;
+    padding: 20px; /* Adjust padding for better spacing */
     overflow: hidden;
     transition: margin-left 0.3s ease;
+    max-width: 1200px; /* Limit content width for better readability */
+    margin: auto; /* Center the content */
 }
 
 /* Sections Styling */
 section {
-    margin: 40px 0;
-    padding: 40px;
+    margin: 20px 0; /* Add consistent spacing between sections */
+    padding: 20px; /* Increase padding for better content spacing */
     background-color: var(--color-light);
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Slightly larger border radius for a smoother look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Fix shadow syntax */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* Ensure the section doesn't overflow the parent */
 }
 
+/* Hover Effect */
 section:hover {
     transform: translateY(-6px); /* Smooth hover effect */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Section Headings */
 section h2 {
     font-size: var(--font-large);
     color: var(--color-dark);
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Better spacing below headings */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+/* Section Paragraphs */
 section p {
     font-size: var(--font-medium);
     color: var(--color-grey);
+    line-height: 1.8; /* Improve readability with proper line height */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        margin-left: 0; /* Remove sidebar margin on small screens */
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+        margin: 15px 0; /* Adjust spacing between sections */
+    }
+
+    section h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for headings */
+    }
+
+    section p {
+        font-size: 0.9rem; /* Adjust font size for better scaling */
+    }
 }
 
 /* Footer */
