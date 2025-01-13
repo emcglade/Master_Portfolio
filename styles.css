@@ -90,7 +90,11 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* This will add space between each list item */
+    gap: 20px; /* Space between items */
+}
+
+.nav_menu_list li {
+    margin-bottom: 10px; /* Optional, just to ensure clean spacing */
 }
 
 .nav_menu_list a {
@@ -109,7 +113,7 @@ body {
 
 /* Main Content */
 main {
-    margin-left: 250px;
+    margin-left: 250px; /* Account for the sidebar width */
     padding: 30px;
     overflow: hidden;
 }
