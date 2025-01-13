@@ -18,7 +18,7 @@
         <div class="hero-content">
             <h1 class="fun-title">Welcome 🤘 to Emma McGlade's Portfolio</h1>
             <p>Data Engineer</p>
-            <a href="#portfolio-section" class="cta-button">View My Work</a>
+            <a href="#about" class="cta-button">View My Work</a>
         </div>
         <nav class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
@@ -35,9 +35,9 @@
             <p>Currently, I work as a Data Engineer at Options IT, where I use Python and REST APIs to automate processes, optimize workflows, and drive actionable insights.<br>
                As I continue to grow my skills, I'm diving into web development with a focus on HTML, CSS, and JavaScript, and I'm excited to apply these skills to new projects.<br>
 
-                This portfolio is a reflection of my journey, showcasing my work and skills in data analysis, web development, and sports analytics. Feel free to explore and get in touch if you’re interested in collaborating!</p>
-                <img src="images/Emma.jpeg" alt="My Picture" style="width:300px;"> 
-            </section>
+               This portfolio is a reflection of my journey, showcasing my work and skills in data analysis, web development, and sports analytics. Feel free to explore and get in touch if you’re interested in collaborating!</p>
+               <img src="images/Emma.jpeg" alt="My Picture" style="width:300px;"> 
+        </section>
 
         <section id="portfolio-section">
             <h2>Portfolio</h2>
@@ -55,39 +55,35 @@
         
             <!-- Atlas Monitoring Tool Project Title and iframe -->
             <h4>ETL Process for Atlas - Global Monitoring Tool</h4>
-            <p>An ETL process to collect switch logs from Options global switch infrastructure, tranform the logs ingesting them via their event time, ensuring every log had an event time.<br>I make sure each log is collected and covereted into a UTC time format.<b>Why was this important for this project?</b><br> The syslog boxes where the data is collected from are all in different time zones in the cluster - putting them into a universal time format will keep time standardised.<br>Once I have the transformed data using <b>Python Pandas</b>, I use the <b>MongoDB</b> python module to send the logs to individual collections, ready to be visualised and displayed on Options Website.</p>
+            <p>An ETL process to collect switch logs from Options global switch infrastructure, transform the logs by ingesting them via their event time, ensuring each log has an event time.<br> I make sure each log is collected and converted into a UTC time format.<br><b>Why was this important for this project?</b><br> The syslog boxes where the data is collected from are all in different time zones - converting them into a universal time format keeps everything standardized.</p>
             <iframe
                 src="https://www.options-it.com/atlas.php"
                 width="100%" 
                 height="600" 
                 style="border: none;">
             </iframe>
-        
-            
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>Feel free to reach out to me at <a href="mailto:emglade98@gmail.com">emglade98@gmail.com</a>.</p>
-            
         </section>
+
         <section id="cv-download">
             <h2>Download My CV</h2>
             <p>Interested in learning more about my experience? Click the button below to download my CV.</p>
             <a href="doc/CV.pdf" download class="cv-button">Download CV</a>
         </section>
-        
     </main>
     
     <footer>
-    <p>&copy; 2024 Emma McGlade. All Rights Reserved.</p>
-    <ul class="social-links">
-        <li><a href="https://linkedin.com/in/emma-mcglade" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/emcglade" target="_blank">GitHub</a></li>
-    </ul>
-</footer>
-<script src="script.js"></script>
+        <p>&copy; 2024 Emma McGlade. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://linkedin.com/in/emma-mcglade" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/emcglade" target="_blank">GitHub</a></li>
+        </ul>
+    </footer>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
