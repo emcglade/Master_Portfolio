@@ -108,6 +108,7 @@ body {
 main {
     margin-left: 250px;
     padding: 30px;
+    overflow: hidden;
 }
 
 section {
@@ -168,5 +169,14 @@ footer ul a:hover {
 
     main {
         margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 18px;
     }
 }
