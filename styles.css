@@ -24,6 +24,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Hero Section */
@@ -38,6 +40,7 @@ body {
     text-align: center;
     padding: 30px 20px;
     position: relative;
+    flex-grow: 1;
 }
 
 .hero h1 {
@@ -69,15 +72,15 @@ body {
 /* Navigation Bar */
 .nav-menu {
     background-color: var(--color-secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    width: 250px;
+    height: 100vh;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav_menu_list {
@@ -85,25 +88,27 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .nav_menu_list li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 .nav_menu_list a {
     color: var(--color-light);
-    text-decoration: underline;
-    font-size: 1.6rem;
+    text-decoration: none;
+    font-size: 1.2rem;
     font-weight: var(--font-weight-regular);
-    padding: 10px;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
 }
 
 .nav_menu_list a:hover {
-    color: var(--color-primary);
+    color: var(--color-dark);
+    background-color: var(--color-primary);
 }
 
 .hamburger {
@@ -116,13 +121,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav_menu_list {
-        flex-direction: column;
-        display: none;
+    .nav-menu {
+        width: 200px;
     }
 
-    .nav_menu_list.show {
-        display: flex;
+    .nav_menu_list a {
+        font-size: 1rem;
     }
 
     .hamburger {
@@ -132,7 +136,8 @@ body {
 
 /* Main Content */
 main {
-    margin-top: 100px; /* To ensure content doesn’t overlap with the fixed nav */
+    margin-left: 250px; /* Account for the navigation bar width */
+    flex-grow: 1;
     padding: 20px;
     text-align: center;
 }
