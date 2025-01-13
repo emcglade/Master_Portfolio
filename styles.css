@@ -82,50 +82,42 @@ body {
 
 /* Navigation Sidebar */
 .nav-menu {
-    display: none;  
-    background-color: var(--color-secondary);
-    width: 260px;
-    height: 100vh;
+    transform: translateX(-100%);
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 30px 20px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--color-secondary);
+    z-index: 1;
     transition: transform 0.3s ease;
 }
 
-
-.nav-menu {
-    transform: translateX(-100%); /* Hidden off-screen */
-    transition: transform 0.3s ease;
-}
-
+/* Toggle Menu when checked */
 .menu-toggle:checked ~ .nav-menu {
     transform: translateX(0); /* Slide in */
 }
 
-
-/* Style the hamburger icon */
+/* Hamburger Icon */
 #open-label {
     display: inline-block;
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 2;
+    z-index: 2; /* Ensure it’s above the menu */
 }
 
-#open-label  span {
+#open-label span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: var(--color-light);
     margin: 4px 0;
+    transition: background-color 0.3s ease;
 }
 
+/* Navigation Menu List */
 .nav_menu_list {
     list-style-type: none;
     padding: 0;
@@ -161,6 +153,7 @@ main {
     transition: margin-left 0.3s ease;
 }
 
+/* Sections Styling */
 section {
     margin: 40px 0;
     padding: 40px;
@@ -223,7 +216,7 @@ footer ul a:hover {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .nav-menu {
-        width: 230px;
+        width: 230px; /* Adjust width for smaller screens */
     }
 
     main {
