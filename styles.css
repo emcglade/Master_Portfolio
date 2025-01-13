@@ -97,10 +97,16 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Show the nav menu when the checkbox is checked */
-.menu-toggle:checked + #open-label + .nav-menu {
-    display: flex; /* Show sidebar when checked */
+
+.nav-menu {
+    transform: translateX(-100%); /* Hidden off-screen */
+    transition: transform 0.3s ease;
 }
+
+.menu-toggle:checked ~ .nav-menu {
+    transform: translateX(0); /* Slide in */
+}
+
 
 /* Style the hamburger icon */
 #open-label {
