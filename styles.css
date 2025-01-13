@@ -88,7 +88,9 @@ body {
 .nav_menu_list {
     list-style-type: none;
     padding: 0;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This will add space between each list item */
 }
 
 .nav_menu_list a {
