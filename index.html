@@ -55,6 +55,7 @@
         
             <!-- Atlas Monitoring Tool Project Title and iframe -->
             <h4>ETL Process for Atlas - Global Monitoring Tool</h4>
+            <p> Here I used an ETL process to collect switch logs from Options global switch infrastructure, tranform the logs ingesting them via their event time, ensuring every log had an event time.<br>I make sure each log is collected and covereted into a UTC time format.<b>Why was this important?</b> The syslog boxes where the data is collected from are all in different time zones in the cluster - putting them into a universal time format will keep time standardised.Once I have the transformed data using <b>Python Pandas</b>, I use the <b>MongoDB</b> python module to send the logs to individual collections, ready to be visualised and displayed on Options Website.  </p>
             <iframe
                 src="https://www.options-it.com/atlas.php"
                 width="100%" 
