@@ -53,17 +53,17 @@
             <h3>My Projects</h3><br><br>
         
             <!-- COVID Analysis Project Title and iframe -->
-            <h4>COVID Analysis Project: Highest Cases</h4><br><br>
+            <h4>COVID Analysis Project Using Pandas In Python: Highest Cases</h4><br><br>
             <iframe 
                 src="https://nbviewer.org/github/emcglade/Master_Portfolio/blob/master/covid_analysis_project_highest_cases%20.ipynb" 
                 width="100%" 
                 height="600" 
                 style="border: none;">
-            </iframe>
+            </iframe><br><br>
         
             <!-- Atlas Monitoring Tool Project Title and iframe -->
             <h4>ETL Process for Atlas - Global Monitoring Tool</h4><br><br>
-            <p>An ETL process to collect switch logs from Options global switch infrastructure, transform the logs by ingesting them via their event time, ensuring each log has an event time.<br><br>I make sure each log is collected and converted into a UTC time format.<br><br><b>Why was this important for this project?<b></b><br> The syslog boxes where the data is collected from are all in different time zones - converting them into a universal time format keeps everything standardized.</p>
+            <p>Switch logs are sent using syslog-ng to various nodes in the cluster, depending on their region. A custom app is deigned to collect the logs by monitoring the directory. This data is needed in real time so I cannot use batch processing to stream the data . In this case, I need to think about resourcing issues, such as the directories filling up and causing disk issues. A line is added into the stanza within the app to remove the record once it has been ingested.<br><br> Once ingested into Splunk, I transform the logs by ingesting them via their event time, ensuring each log has an event time, cleaning the data (checking for null and duplicate values/ inconsistent data).<br><br>I make sure each log is collected and converted into a UTC time format.<br><br><b>Why was this important for this project?<b></b><br> The syslog boxes (where the data is collected from) are all in different time zones - converting them into a universal time format keeps the time format standardised.</p><br><br> <p>Using a python script, I connect into Splunk using the Splunk API, transform the data further using Pandas and send the data to MongoDB where the centralised database can be kept updated with the latest disruptions.</p> <br></br> <p>This data is then visualised and hosted on our company website.</p>
             <iframe
                 src="https://www.options-it.com/atlas.php"
                 width="100%" 
@@ -74,7 +74,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me at <a href="mailto:emglade98@gmail.com">emglade98@gmail.com</a>.</p>
+            <p>Feel free to reach out to me at <a href="mailto:emcglade98@gmail.com">emglade98@gmail.com</a>.</p>
         </section>
 
         <section id="cv-download">
